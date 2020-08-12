@@ -1,0 +1,17 @@
+{
+  "name": "wiotp-simulator",
+  "version": "0.0.1",
+  "description": "Sample data generator and device simulator for WIOTP",
+  "main": "device-simulator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "va barbosa (https://github.com/vabarbosa/)",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@wiotp/sdk": "^0.7.7",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.0",
+    "yargs": "^15.4.1"
+  }
+}

@@ -1,0 +1,708 @@
+[
+    {
+        "id": "a8d4d63c.19f6e",
+        "type": "tab",
+        "label": "WIoTP to HERE Tracking",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "b577d05b.fc9af",
+        "type": "subflow",
+        "name": "HERE Tracking token",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 60,
+                "wires": [
+                    {
+                        "id": "92b3cf5c.5fd4c8"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 1060,
+                "y": 293,
+                "wires": [
+                    {
+                        "id": "288fa297.987c16",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "color": "#DDAA99"
+    },
+    {
+        "id": "d151f362.d4445",
+        "type": "ui_group",
+        "z": "",
+        "name": "Start / Stop",
+        "tab": "f8d4b56f.94eb08",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "7908ce55.318b9",
+        "type": "ui_group",
+        "z": "",
+        "name": "ESP8266 Sensors",
+        "tab": "bc36f841.abe698",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "bc36f841.abe698",
+        "type": "ui_tab",
+        "z": "",
+        "name": "ESP8266 Workshop",
+        "icon": "dashboard",
+        "order": 3
+    },
+    {
+        "id": "8a915946.fc247",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "6f2be4ad.90c484",
+        "type": "ui_group",
+        "z": "",
+        "name": "Line Chart Examples",
+        "tab": "a7356e92.f40b58",
+        "order": 1,
+        "disp": true,
+        "width": "8"
+    },
+    {
+        "id": "403c381e.aea93",
+        "type": "ui_group",
+        "z": "",
+        "name": "Bar Chart Examples",
+        "tab": "a7356e92.f40b58",
+        "order": 3,
+        "disp": true,
+        "width": "8"
+    },
+    {
+        "id": "f7d193ba.fc2798",
+        "type": "ui_group",
+        "z": "",
+        "name": "Pie Chart Examples",
+        "tab": "a7356e92.f40b58",
+        "order": 2,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "a7356e92.f40b58",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Chart Examples",
+        "icon": "fa-area-chart",
+        "order": 1
+    },
+    {
+        "id": "b230218c.635fb8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Historical Data",
+        "tab": "a30d3d1.17197c",
+        "order": 1,
+        "disp": true,
+        "width": "18"
+    },
+    {
+        "id": "c82cc7d8.f27068",
+        "type": "ui_group",
+        "z": "",
+        "name": "Chart Controls",
+        "tab": "a30d3d1.17197c",
+        "order": 2,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "bf4d48fb.ed306",
+        "type": "cloudant",
+        "z": "",
+        "host": "https://16ad429e-9d49-4534-afa9-7955a9981991-bluemix:b95ca428fb2cd18ae9106e393f14eb7c45d82fd58bb53c5a04f821607b0e268e@16ad429e-9d49-4534-afa9-7955a9981991-bluemix.cloudant.com",
+        "name": "cloudant-xh"
+    },
+    {
+        "id": "a30d3d1.17197c",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Historical Data",
+        "icon": "fa-area-chart",
+        "order": 5
+    },
+    {
+        "id": "7cb9ae9d.1495d",
+        "type": "ui_group",
+        "z": "",
+        "name": "Historical Data",
+        "tab": "cad9d4e7.48b638",
+        "order": 1,
+        "disp": true,
+        "width": "18"
+    },
+    {
+        "id": "7840cbd7.0e3a34",
+        "type": "ui_group",
+        "z": "",
+        "name": "Chart Controls",
+        "tab": "cad9d4e7.48b638",
+        "order": 2,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "cad9d4e7.48b638",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Historical Data",
+        "icon": "fa-area-chart",
+        "order": 5
+    },
+    {
+        "id": "f4a11f9e.d2d6a",
+        "type": "ui_group",
+        "z": "",
+        "name": "Change ESP8266 Reporting Interval",
+        "tab": "bdb3e2ec.589d1",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false
+    },
+    {
+        "id": "bdb3e2ec.589d1",
+        "type": "ui_tab",
+        "z": "",
+        "name": "ESP8266 Interval",
+        "icon": "dashboard",
+        "order": 4
+    },
+    {
+        "id": "27cf5c5c.30d48c",
+        "type": "image-caption-generator-service",
+        "z": "",
+        "host": "https://max-image-caption-generator.max.us-south.containers.appdomain.cloud",
+        "name": "cloud"
+    },
+    {
+        "id": "74dc477.c698eb8",
+        "type": "ibmiot",
+        "z": "",
+        "name": "WIoTP credentials",
+        "keepalive": "60",
+        "serverName": "320129.messaging.internetofthings.ibmcloud.com",
+        "cleansession": true,
+        "appId": "",
+        "shared": false
+    },
+    {
+        "id": "91211908.b51988",
+        "type": "ibmiot in",
+        "z": "a8d4d63c.19f6e",
+        "authentication": "apiKey",
+        "apiKey": "74dc477.c698eb8",
+        "inputType": "evt",
+        "logicalInterface": "",
+        "ruleId": "",
+        "deviceId": "",
+        "applicationId": "",
+        "deviceType": "+",
+        "eventType": "+",
+        "commandType": "",
+        "format": "json",
+        "name": "IBM IoT",
+        "service": "registered",
+        "allDevices": true,
+        "allApplications": "",
+        "allDeviceTypes": true,
+        "allLogicalInterfaces": "",
+        "allEvents": true,
+        "allCommands": "",
+        "allFormats": "",
+        "qos": 0,
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "aed61d7e.9d8448",
+                "6cc5b3c0.f00e9c"
+            ]
+        ]
+    },
+    {
+        "id": "6cc5b3c0.f00e9c",
+        "type": "function",
+        "z": "a8d4d63c.19f6e",
+        "name": "wiotp-to-here payload",
+        "func": "if (msg.deviceId && msg.payload.lat) {\n    const deviceId = msg.deviceId;\n    \n    const data = {\n        position: {\n            accuracy: 2,\n            lat: msg.payload.lat,\n            lng: msg.payload.lon || msg.payload.lng\n        },\n        timestamp: msg.payload.timestamp\n    };\n    \n    msg.payload = {\n        id: deviceId,\n        appId: global.get(\"HERE_APP_ID\"),\n        data: [data]\n    }\n    \n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 320,
+        "y": 160,
+        "wires": [
+            [
+                "b7d5db7e.5ef72"
+            ]
+        ]
+    },
+    {
+        "id": "4ddae1b6.d2d7e8",
+        "type": "debug",
+        "z": "a8d4d63c.19f6e",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "48d1ddf4.c67efc",
+        "type": "http request",
+        "z": "a8d4d63c.19f6e",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://tracking.api.here.com/v3/",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 510,
+        "y": 440,
+        "wires": [
+            [
+                "d9b39526.44949"
+            ]
+        ]
+    },
+    {
+        "id": "d9b39526.44949",
+        "type": "debug",
+        "z": "a8d4d63c.19f6e",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "aa00f0cc.73bf1",
+        "type": "http request",
+        "z": "b577d05b.fc9af",
+        "name": "HERE Tracking login",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://tracking.api.here.com/users/v2/login",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 700,
+        "y": 120,
+        "wires": [
+            [
+                "a59f8d4d.d868e"
+            ]
+        ]
+    },
+    {
+        "id": "aed61d7e.9d8448",
+        "type": "subflow:b577d05b.fc9af",
+        "z": "a8d4d63c.19f6e",
+        "name": "HERE Tracking token",
+        "env": [],
+        "x": 320,
+        "y": 220,
+        "wires": [
+            [
+                "b7d5db7e.5ef72"
+            ]
+        ]
+    },
+    {
+        "id": "92b3cf5c.5fd4c8",
+        "type": "function",
+        "z": "b577d05b.fc9af",
+        "name": "check if logged in",
+        "func": "const loggedIn = flow.get(\"loggedIn\");\nconst requestedTime = flow.get(\"requestedTime\");\nlet payload = \"login\";\n\nif (loggedIn && requestedTime) {\n    const now = (new Date()).getTime();\n    const expiresTime = (loggedIn.expiresIn || 0) * 1000;\n    \n    // expires in less than two minutes\n    if (now + 120000 >= requestedTime + expiresTime) {\n        payload = \"refresh\"\n    } else if (loggedIn.accessToken) {\n        payload = loggedIn;\n    }\n}\n\nreturn { payload: payload };\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 210,
+        "y": 60,
+        "wires": [
+            [
+                "c85ad216.d2527"
+            ]
+        ]
+    },
+    {
+        "id": "c85ad216.d2527",
+        "type": "switch",
+        "z": "b577d05b.fc9af",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "login",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "refresh",
+                "vt": "str"
+            },
+            {
+                "t": "hask",
+                "v": "accessToken",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": true,
+        "outputs": 3,
+        "x": 281,
+        "y": 280,
+        "wires": [
+            [
+                "d9ddb130.245ea"
+            ],
+            [
+                "f803ddb1.afea2"
+            ],
+            [
+                "288fa297.987c16"
+            ]
+        ]
+    },
+    {
+        "id": "a59f8d4d.d868e",
+        "type": "change",
+        "z": "b577d05b.fc9af",
+        "name": "store accessToken",
+        "rules": [
+            {
+                "t": "set",
+                "p": "loggedIn",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "requestedTime",
+                "pt": "flow",
+                "to": "",
+                "tot": "date"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 930,
+        "y": 120,
+        "wires": [
+            [
+                "288fa297.987c16"
+            ]
+        ]
+    },
+    {
+        "id": "288fa297.987c16",
+        "type": "function",
+        "z": "b577d05b.fc9af",
+        "name": "auth payload",
+        "func": "return {\n    topic: `here/tracking/token/${msg.payload.userId}`,\n    payload: msg.payload\n};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 930,
+        "y": 293,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b7d5db7e.5ef72",
+        "type": "join",
+        "z": "a8d4d63c.19f6e",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 530,
+        "y": 220,
+        "wires": [
+            [
+                "693ef6d7.3461a"
+            ]
+        ]
+    },
+    {
+        "id": "693ef6d7.3461a",
+        "type": "function",
+        "z": "a8d4d63c.19f6e",
+        "name": "set Auth header",
+        "func": "let headers = null;\nlet payload = null;\n\nconst keys = Object.keys(msg.payload);\n\nfor (let k of keys) {\n    const p = msg.payload[k];\n    if (p.accessToken) {\n        headers = {\n            Authorization: `Bearer ${p.accessToken}`\n        };\n    } else {\n        payload = p;\n    }\n}\n\nif (headers && payload) {\n    return {\n        headers: headers,\n        payload: payload\n    };\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 300,
+        "y": 400,
+        "wires": [
+            [
+                "4ddae1b6.d2d7e8",
+                "48d1ddf4.c67efc"
+            ]
+        ]
+    },
+    {
+        "id": "f803ddb1.afea2",
+        "type": "function",
+        "z": "b577d05b.fc9af",
+        "name": "refresh login",
+        "func": "let loggedIn = flow.get(\"loggedIn\");\n\nreturn {\n    payload: {\n        accessToken: loggedIn.accessToken,\n        refreshToken: loggedIn.refreshToken\n    }\n};\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 490,
+        "y": 200,
+        "wires": [
+            [
+                "d7194032.9d1ee8"
+            ]
+        ]
+    },
+    {
+        "id": "d7194032.9d1ee8",
+        "type": "http request",
+        "z": "b577d05b.fc9af",
+        "name": "HERE Tracking login refresh",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://tracking.api.here.com/users/v2/refresh",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 720,
+        "y": 200,
+        "wires": [
+            [
+                "a59f8d4d.d868e"
+            ]
+        ]
+    },
+    {
+        "id": "7976e222.d2ba44",
+        "type": "credentials",
+        "z": "a8d4d63c.19f6e",
+        "name": "Set Credentials",
+        "props": [
+            {
+                "value": "HERE_ACCOUNT_EMAIL",
+                "type": "global"
+            },
+            {
+                "value": "HERE_ACCOUNT_PASSWORD",
+                "type": "global"
+            },
+            {
+                "value": "HERE_APP_ID",
+                "type": "global"
+            }
+        ],
+        "x": 320,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4880932b.45bb84",
+        "type": "inject",
+        "z": "a8d4d63c.19f6e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "on startup",
+        "payloadType": "str",
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "7976e222.d2ba44"
+            ]
+        ]
+    },
+    {
+        "id": "d9ddb130.245ea",
+        "type": "function",
+        "z": "b577d05b.fc9af",
+        "name": "get credentials",
+        "func": "return {\n    payload: {\n        email: global.get(\"HERE_ACCOUNT_EMAIL\"),\n        password: global.get(\"HERE_ACCOUNT_PASSWORD\")\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 480,
+        "y": 120,
+        "wires": [
+            [
+                "aa00f0cc.73bf1"
+            ]
+        ]
+    }
+]
