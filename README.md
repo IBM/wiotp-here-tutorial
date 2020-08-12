@@ -35,21 +35,21 @@ To keep the focus primarily on the platforms and tools and not hardware or speci
 
 # Steps
 
-1. [Create an Internet of Things Platform Starter application](#)
-1. [Add an IoT Device Type and Device to Watson IoT](#)
-1. [Simulate IoT data](#)
-1. [Set up HERE Tracking](#)
-1. [Add a Virtual Device to HERE Tracking](#)
-1. [Create Node-RED flow to pass message from Watson IoT to HERE Tracking](#)
-1. [Test the integration](#)
+1. [Create an Internet of Things Platform application](#create-an-internet-of-things-platform-application)
+1. [Add an IoT Device Type and Device to Watson IoT](#add-an-iot-device-type-and-device-to-watson-iot)
+1. [Simulate IoT data](#simulate-iot-data)
+1. [Set up HERE Tracking](#set-up-here-tracking)
+1. [Add a Virtual Device to HERE Tracking](#add-a-virtual-device-to-here-tracking)
+1. [Route Watson IoT messages to HERE Tracking](#route-watson-iot-messages-to-here-tracking)
+1. [Test the integration](#test-the-integration)
 
-## Create an Internet of Things Platform Starter application
+## Create an Internet of Things Platform application
 
 The first step is to create an IoT application on IBM Cloud using the IBM Watson IoT Platform service and the Node-RED App Starter Kit.
 
 Follow the instructions in [this tutorial](https://developer.ibm.com/tutorials/how-to-create-an-internet-of-things-platform-starter-application/) to provision a Node-RED App and Watson IoT Platform service.
 
-## Add an IoT Device Type and Device 
+## Add an IoT Device Type and Device to Watson IoT
 
 After completing the previous step, you will have a Node-RED Starter Kit application connected to the IBM Watson IoT Platform. You can now proceed to adding an device to Watson IoT.
 
@@ -231,7 +231,7 @@ From a terminal:
 
 Your HERE Tracking virtual device is now ready to start receiving messages and the report will update according to its _Report Location_ settings.
 
-## Forward messages from Watson IoT to HERE Tracking
+## Route Watson IoT messages to HERE Tracking
 
 To forward the messages received by Watson IoT to HERE Tracking you will use Node-RED. The Node-RED application will be notified of events received by the Watson IoT Platform, convert the data to conform to HERE Tracking, and then send the updated data to HERE Tracking.
 
