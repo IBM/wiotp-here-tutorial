@@ -29,7 +29,7 @@ To keep the focus primarily on the platforms and tools and not hardware or speci
 
 - Clone the [GitHub repository](https://github.com/ibm/wiotp-here-tutorial) for this tutorial
 - Register for an [IBM Cloud](https://www.ibm.com/account/reg/us-en/signup) account
-- Register for a [HERE](https://developer.here.com/sign-up) account
+- Register for a [HERE](https://developer.here.com/ref/IBM_starterkit_WatsonIoT?create=Freemium-Basic) account
 - (for simulating data) Laptop/workstation with [Node.js installed](https://developer.ibm.com/tutorials/learn-nodejs-installing-node-nvm-and-vscode/)
 
 
