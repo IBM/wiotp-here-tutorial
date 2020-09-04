@@ -28,7 +28,7 @@ To keep the focus primarily on the platforms and tools and not hardware or speci
 # Prerequisites
 
 - Clone the [GitHub repository](https://github.com/ibm/wiotp-here-tutorial) for this tutorial
-- Register for an [IBM Cloud](https://www.ibm.com/account/reg/us-en/signup) account
+- Register for an [IBM Cloud](https://cloud.ibm.com/registration) account
 - Register for a [HERE](https://developer.here.com/ref/IBM_starterkit_WatsonIoT?create=Freemium-Basic) account
 - (for simulating data) Laptop/workstation with [Node.js installed](https://developer.ibm.com/tutorials/learn-nodejs-installing-node-nvm-and-vscode/)
 
@@ -51,7 +51,7 @@ Follow the instructions in [this tutorial](https://developer.ibm.com/tutorials/h
 
 ## Add an IoT Device Type and Device to Watson IoT
 
-After completing the previous step, you will have a Node-RED Starter Kit application connected to the IBM Watson IoT Platform. You can now proceed to adding an device to Watson IoT.
+After completing the previous step, you will have a Node-RED Starter Kit application connected to the IBM Watson IoT Platform. You can now proceed to adding a device to Watson IoT.
 
 From your browser, access the [IBM Watson IoT Platform service created in the first step](https://internetofthings.ibmcloud.com/). Be sure to select your org:
 
@@ -71,7 +71,7 @@ From your browser, access the [IBM Watson IoT Platform service created in the fi
 
 1. From the sidebar, select **Devices**
 1. In the _Devices_ page, select the **Browse** tab
-1. Click **Add Device** to open the _Add Type_ form
+1. Click **Add Device** to open the _Add Device_ form
 1. For _Device Type_, select the device type created earlier (e.g., `wiotp-device-type-01`)
 1. Enter a unique _Device ID_ for the device (e.g., `wiotp-device-01`)
 1. Click **Next**
@@ -112,7 +112,7 @@ The tutorial provides some sample data and a basic simulator to send the data to
     1. Go back into the IBM Watson IoT Platform dashboard
     1. In the sidebar, select **Devices**
     1. In the _Devices_ page, select the **Browse** tab
-    1. In the Devices list table, click the **&#8594;** for your device
+    1. In the Devices list table, click the **&#8594;** button for your device
 
         ![Select device](img/02-device-detail.png)
 
@@ -131,7 +131,7 @@ To configure and run the simulator application
     - `WIOTP_ORG_ID`: set to the Organization ID of your Watson IoT Platform service
     - `WIOTP_TYPE_ID`: set to the Name of your device type (e.g., `wiotp-device-type-01`)
     - `WIOTP_DEVICE_ID`: set to the Device ID of your device (e.g., `wiotp-device-01`)
-    - `WIOTP_AUTH_TOKEN`: set to the Authentication Token of your device
+    - `WIOTP_AUTH_TOKEN`: set to the Authentication Token of your device (not the service Authentication Token)
 
 1. From a terminal:
 
@@ -139,9 +139,9 @@ To configure and run the simulator application
     1. Install the dependencies: `npm install`
     1. Run the command: `node device-simulator.js sample-data/sample-data.json`
 
-        The simulator will connects to your instance of Watson IoT Platform and the contents of the `sample-data/sample-data.json` file will be sent (mimicking possible data coming from a device). 
+        The simulator will connect to your instance of Watson IoT Platform and the contents of the `sample-data/sample-data.json` file will be sent (mimicking possible data coming from a device). 
         
-You should be able to see the messages show up in the device's _Recent Events_ table to confirm your set up.
+After a few seconds, you should be able to see the messages show up in the device's _Recent Events_ table. Seeing these messages should confirm your set up is correct.
 
 ## Set up HERE Tracking
 
@@ -168,7 +168,7 @@ HERE Tracking is hardware-agnostic and can be used by any device that produces c
 
 In this tutorial, we will a set up cloud-to-cloud connection from IBM Cloud to HERE Tracking so messages received by Watson IoT platform can be converted into the proper format and sent to HERE Tracking.
 
-For cloud-to-cloud connectivity, a virtual device is defined and registered. The hardware device would send it data to an external service (in the case, the Watson IoT Platform service), the data is properly formatted and forwarded HERE Tracking (using the virtual device credentials).
+For cloud-to-cloud connectivity, a virtual device is defined and registered. The hardware device would send its data to an external service (in the case, the Watson IoT Platform service), the data is properly formatted and forwarded to HERE Tracking (using the virtual device credentials).
 
 #### Create a virtual device and obtain a license
 
@@ -197,7 +197,7 @@ From a terminal:
       -d '{ "devices": [ { "id": "<device_id>" } ] }'
     ```
 
-    Replace `<app_id>` in the URL with your HERE Tracking project _Cloud-to-Cloud Connector_ **APP ID** obtained earlier in HERE Admin Portal. Replace `<access_token>` in the _Authorization_ header with the `accessToken` obtained in the previous step and replace `<device_id>` with the ID of your device created earlier (e.g., `wiotp-device-01`) in Watson IoT Platform.
+    Replace `<app_id>` in the URL with your HERE Tracking project _Cloud-to-Cloud Connector_ **APP ID** obtained earlier in HERE Admin Portal. Replace `<access_token>` in the _Authorization_ header with the HERE API `accessToken` obtained in the previous step and replace `<device_id>` with the ID of your device created earlier (e.g., `wiotp-device-01`) in Watson IoT Platform.
 
     Make note of the `jobId` returned in the response.
 
@@ -210,7 +210,7 @@ From a terminal:
       -H 'Content-Type: application/json'
     ```
 
-    Replace `<job_id>` in the URL with the `jobId` obtained in the previous response. Replace `<access_token>` in the _Authorization_ header with the `accessToken` obtained earlier.
+    Replace `<job_id>` in the URL with the `jobId` obtained in the previous response. Replace `<access_token>` in the _Authorization_ header with the HERE API `accessToken` obtained earlier.
 
     Make note of the `deviceId` returned in the response.
 
@@ -252,9 +252,11 @@ To forward the messages received by Watson IoT to HERE Tracking you will use Nod
 1. From the Node-RED editor, click the _Menu_ button in the top right
 1. Click **Import**
 1. In the _Import nodes_ dialog, select the **Clipboard** tab
-1. Click the **select a file to import** button, then browse and open the `flow/wiotp-to-here-flows.json.json` file in the cloned repo
+1. Click the **select a file to import** button, then browse and open the `flow/wiotp-to-here-flows.json` file in the cloned repo
 1. For _Import to_, select **new flow**
 1. Click **Import**
+
+The Node-RED flows should get loaded into your Node-RED editor.
 
 #### Configure & deploy the Node-RED flows
 
@@ -293,7 +295,7 @@ From a terminal, run the device simulator:
 $ node device-simulator.js sample-data/boston-cambridge.json
 ```
 
-If you look at the Node-RED editor, you should see in the _Debug_ sidebar responses from HERE Tracking after each message is sent. If everything is properly configured, `statusCode` in the response should be **200**.
+If you look at the Node-RED editor, you should see in the _Debug_ sidebar responses from HERE Tracking after each message is sent. If everything is properly configured, the `statusCode` in the responses should be **200**.
 
 In the [HERE Tracking Workspace page](https://app.tracking.here.com/workspace) for your virtual device, you should see the location of the device on the map. The location and map should update periodically depending on your report setting.
 
